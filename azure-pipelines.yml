@@ -1,11 +1,9 @@
 # Starter pipeline
-- task: Bash@3
+- task: SSH@0
   inputs:
-    targetType: 'inline'
-    script: |
-      - date
-      - hostname
-      echo 'Hello world'
+    runOptions: 'commands'
+    commands: 'date'
+    readyTimeout: '20000'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
